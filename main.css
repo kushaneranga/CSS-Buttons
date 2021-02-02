@@ -12,6 +12,13 @@ body {
     background: linear-gradient(to right, #434343, #000000);
 }
 
-.light-buttons {
-    
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.light-button {
+    font-family: 'Roboto', sans-serif;
 }
