@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 * {
     margin: 0;
@@ -7,18 +7,69 @@
 }
 
 body {
-    background: #000000;
-    background: -webkit-linear-gradient(to right, #434343, #000000);
-    background: linear-gradient(to right, #434343, #000000);
+    background-color: #030918;
 }
 
 .content {
-    display: flex;
+    display:flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 .light-button {
     font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    background-color: #202020;
+    padding: 12px 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
 }
+
+.light-button:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -3px;
+    left: -3px;
+    height: calc(100% + 6px);
+    width: calc(100% + 6px);
+    background: linear-gradient(to right, #b41d70,  #8a2387, #46f9ff,  #36ff62, #ff0000);
+    background-size: 100%;
+    opacity: 0;
+    filter: blur(5px);
+    transition: 1s;
+    background-size: 500%;
+    transition: opacity .3s ease-in-out;
+    animation: animate 4s linear infinite;
+
+}
+
+.light-button:hover:before {
+    opacity: 1;
+}
+
+.light-button:hover:active{
+    background: none;
+  }
+  
+.light-button:hover:active:before{
+    filter: blur(1px);
+  }
+
+  @keyframes animate {
+    0% { background-position: 0 0; }
+    50% { background-position: 100% 0; }
+    100% { background-position: 0 0; }
+  }
+  
